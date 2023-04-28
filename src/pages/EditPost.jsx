@@ -54,21 +54,27 @@ const EditPost = () => {
         <>
             <div className='mx-auto max-w-[800px] xl:px-0 px-6 mt-10'>
                 <form onSubmit={updatePost}>
-                    <input type="title"
+                    <input
+                        className='block w-full h-12 mb-4 leading-3 text-black px-4 outline-none border border-black rounded-sm bg-white'
+                        type="title"
                         placeholder='Title'
                         value={title}
                         onChange={(ev) => setTitle(ev.target.value)}
                     />
-                    <input type="summary"
+                    <input
+                        className='block w-full h-12 mb-4 leading-3 text-black px-4 outline-none border border-black rounded-sm bg-white'
+                        type="summary"
                         placeholder='Summary'
                         value={summary}
                         onChange={(ev) => setSummary(ev.target.value)}
                     />
-                    <input type="file"
+                    <input
+                        className='block w-full h-12 mb-4 leading-3 text-black p-4 outline-none border border-black rounded-sm bg-white'
+                        type="file"
                         onChange={(ev) => setFiles(ev.target.files)}
                     />
                     <Editor onChange={setContent} value={content} />
-                    <button className='flex mb-2 px-4 py-2 bg-black justify-center text-white w-full rounded-sm' type='submit'>Update post</button>
+                    <button className='flex my-2 px-4 py-2 bg-black justify-center text-white w-full rounded-sm' type='submit'>Update post</button>
 
                     <Link className='flex mb-2 px-4 py-2 bg-black justify-center text-white w-full rounded-sm' to={`/post/${id}`}>Back</Link>
 

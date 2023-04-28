@@ -20,9 +20,9 @@ const CreatePost = () => {
         data.set('content', content);
         data.set('file', files[0]);
 
-        axios.post(`${url}/post}`, data, { withCredentials: true })
+        axios.post(`${url}/post`, data, { withCredentials: true })
             .then(response => {
-                // console.log(response.data);
+                console.log(response.data);
                 setRedirect(true);
             })
             .catch(error => {
@@ -53,8 +53,8 @@ const CreatePost = () => {
                     onChange={(ev) => setSummary(ev.target.value)}
                 />
                 <input
-                className='block w-full h-12 mb-4 leading-3 text-black p-4 outline-none border border-black rounded-sm bg-white'
-                 type="file"
+                    className='block w-full h-12 mb-4 leading-3 text-black p-4 outline-none border border-black rounded-sm bg-white'
+                    type="file"
                     onChange={(ev) => setFiles(ev.target.files)
                     }
                 />
