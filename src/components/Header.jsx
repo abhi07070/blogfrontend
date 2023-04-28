@@ -6,7 +6,7 @@ import { UserContext } from "../UserContext";
 const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
   const [openClose, setOpenClose] = useState(false);
-  const url = process.env.REACT_APP_PORT;
+  const url = process.env.REACT_APP_API_URL;
   useEffect(() => {
     axios.get(`${url}/profile`, { withCredentials: true })
       .then(response => {

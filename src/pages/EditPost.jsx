@@ -14,7 +14,7 @@ const EditPost = () => {
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState(false);
     const [postInfo, setPostInfo] = useState(null);
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         axios.get(`${url}/post/${id}`)
             .then(response => {

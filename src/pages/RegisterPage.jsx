@@ -4,7 +4,7 @@ import axios from 'axios';
 const RegisterPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     function handleRegister(ev) {
         ev.preventDefault();
         axios.post(`${url}/register`, { username, password })

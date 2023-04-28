@@ -10,7 +10,7 @@ const YourPage = () => {
     const { userInfo } = useContext(UserContext);
     const [postInfo, setPostInfo] = useState(null);
     const [posts, setPosts] = useState([]);
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         axios.get(`${url}/post?author=${userInfo.id}`)
             .then(response => {

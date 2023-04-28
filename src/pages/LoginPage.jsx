@@ -10,7 +10,7 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const [redirect, setRedirect] = useState(false);
     const { setUserInfo } = useContext(UserContext);
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     console.log(url)
     function handleLogin(ev) {
         ev.preventDefault();

@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const Post = ({ _id, title, summary, cover, content, createdAt, author }) => {
     const { setUserInfo, userInfo } = useContext(UserContext);
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         axios
             .get(`${url}/profile`, { withCredentials: true })

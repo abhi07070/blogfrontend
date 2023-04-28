@@ -10,7 +10,7 @@ const PostPage = () => {
     const { userInfo } = useContext(UserContext);
     const { id } = useParams();
     const navigate = useNavigate();
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         axios.get(`${url}/post/${id}`)
             .then(response => {

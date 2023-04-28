@@ -6,7 +6,7 @@ import Spinner from '../components/Spinner';
 const TagPage = () => {
     const [tags, setTags] = useState([]);
     const { category } = useParams();
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         axios.get(`${url}/post?category=${category}`)
             .then(response => {

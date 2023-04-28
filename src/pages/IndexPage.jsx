@@ -6,7 +6,7 @@ import LandingPage from './LandingPage';
 const IndexPage = () => {
 
     const [posts, setPosts] = useState([]);
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     useEffect(() => {
         axios.get(`${url}/post`)
             .then(response => {

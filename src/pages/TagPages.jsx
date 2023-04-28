@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const TagPages = () => {
     const [posts, setPosts] = useState([]);
     const { category, postId } = useParams();
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
         axios.get(`${url}/post?category=${category}`)

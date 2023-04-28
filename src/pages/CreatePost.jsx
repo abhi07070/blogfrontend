@@ -11,7 +11,7 @@ const CreatePost = () => {
     const [content, setContent] = useState('');
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState(false);
-    const url = process.env.REACT_APP_PORT;
+    const url = process.env.REACT_APP_API_URL;
     function createNewPost(ev) {
         ev.preventDefault();
         const data = new FormData();
